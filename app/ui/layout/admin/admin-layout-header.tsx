@@ -37,7 +37,7 @@ export default function AdminLayoutHeader() {
       <div className="absolute right-0 mt-[7px] mr-[8px] ">
         <OutlinedButton
           label="Sair"
-          width={60}
+          width={120}
         />
       </div>
     </div>
