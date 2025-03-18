@@ -5,8 +5,6 @@ import Image from 'next/image';
 import OutlinedButton from "@/app/ui/buttons/outline-buttons";
 
 export default function AdminLayoutHeader() {
-  const title = 'Inicio';
-
   return (
     <div className="absolute w-full p-0 bg-primary text-white h-[56px]">
       <div className="absolute inline-block w-auto ml-2 mt-[7px] p-2 cursor-pointer bg-transparent hover:bg-white/15 rounded-xl">
@@ -14,7 +12,7 @@ export default function AdminLayoutHeader() {
       </div>
 
       <div className="absolute ml-15 mt-[14px] w-6/12 text-xl">
-        PAHO - {title}
+        PAHO
       </div>
 
       <div className="absolute w-[250px] left-[50%] ml-[-125px] mt-[5px] flex items-center justify-between">
@@ -30,15 +28,12 @@ export default function AdminLayoutHeader() {
         </div>
       </div>
 
-      <div className="absolute right-[95px] top-[13px]">
+      <div className="absolute right-[95px] top-[15px]">
         <b>PAHO</b> (Master)
       </div>
 
       <div className="absolute right-0 mt-[7px] mr-[8px] ">
-        <OutlinedButton
-          label="Sair"
-          width={60}
-        />
+        <OutlinedButton label="Sair" />
       </div>
     </div>
   )
