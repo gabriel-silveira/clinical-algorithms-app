@@ -1,9 +1,13 @@
+export interface IDynamicTableDataProp {
+  [key: string]: string | number | boolean;
+}
+
 export interface IDynamicTableProps {
   columns: {
     label: string;
     field: string;
     className?: string;
-    align?: 'left' | 'center';
   }[];
-  data: { [key: string]: string | number | boolean }[];
+  data: IDynamicTableDataProp[];
+  onClick?: (row: object) => void;
 }
