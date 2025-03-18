@@ -1,5 +1,8 @@
+'use client';
+
 import MenuIcon from '@mui/icons-material/Menu';
 import Image from 'next/image';
+import OutlinedButton from "@/app/ui/buttons/outline-buttons";
 
 export default function AdminLayoutHeader() {
   const title = 'Inicio';
@@ -25,6 +28,17 @@ export default function AdminLayoutHeader() {
         <div className="font-bold text-xl">
           Algoritmos Clínicos
         </div>
+      </div>
+
+      <div className="absolute right-[95px] top-[13px]">
+        <b>PAHO</b> (Master)
+      </div>
+
+      <div className="absolute right-0 mt-[7px] mr-[8px] ">
+        <OutlinedButton
+          label="Sair"
+          width={60}
+        />
       </div>
     </div>
   )
