@@ -30,7 +30,7 @@ export default function AdminLayoutHeader() {
         </div>
       </div>
 
-      <div className="absolute right-[95px] top-[13px]">
+      <div className="absolute right-[95px] top-[15px]">
         <b>PAHO</b> (Master)
       </div>
 
