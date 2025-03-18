@@ -12,10 +12,12 @@ export default [
       {
         label: 'Usuários',
         Icon: AccountCircleIcon,
+        link: '/admin/users',
       },
       {
         label: 'Categorias',
         Icon: CategoryIcon,
+        link: '/admin/categories',
       },
     ],
   },
@@ -26,6 +28,7 @@ export default [
       {
         label: 'Manutenção',
         Icon: EditNoteIcon,
+        link: '/admin/algorithms',
       },
     ],
   },

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <div className="pt-8 pl-9 text-white">
+    <div className="pt-8 pl-9">
       <Image
         className="absolute top-5 right-[30px]"
         src="/logo_paho_home.png"
@@ -16,7 +16,7 @@ export default function HomePage() {
         alt="Logo PAHO"
       />
 
-      <div className="w-full lg:w-[50%] pt-[100px] lg:pt-0">
+      <div className="pr-8 w-full lg:w-[50%] pt-[100px] lg:pt-0">
         <h1>Sistema de algoritmos clínicos</h1>
 
         <p>
