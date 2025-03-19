@@ -3,13 +3,19 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --primary: #1998DD;
+  --primary: #00588D;
+  --secondary: #333399;
+  --success: #009955;
+  --warning: #D00000;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
   --font-sans: var(--font-roboto);
 }
 
@@ -34,4 +40,13 @@ h1 {
 
 p {
   padding-bottom: 12px;
+}
+
+form label {
+  color: black;
+}
+
+input[type=text], input[type=email], input[type=password] {
+  color: black;
+  border: 1px solid lightgrey !important;
 }
