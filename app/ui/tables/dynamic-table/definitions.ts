@@ -9,5 +9,4 @@ export interface IDynamicTableProps {
     className?: string;
   }[];
   data: IDynamicTableDataProp[];
-  onClick?: (row: object) => void;
 }

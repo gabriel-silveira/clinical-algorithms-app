@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function AdminMainMenu() {
   return (
-    <div className="absolute left-0 top-[55px] w-[300px] h-[calc(100%-105px)]">
+    <div className="absolute left-0 top-[55px] w-[270px] h-[calc(100%-105px)]">
       {adminMenu.map(({label, Icon, items}, index) => (
         <div key={`section-${index}`}>
           <div className="p-3">

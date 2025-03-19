@@ -1,19 +1,33 @@
-'use client';
+import {Suspense} from "react";
 
 import DynamicTable from "@/app/ui/tables/dynamic-table/dynamic-table";
+import Pagination from "@/app/ui/paginations/pagination";
+import {getUsers} from "@/app/lib/actions/users-actions";
 import {usersTableColumns} from "@/app/lib/data/users-table-data";
-import {IDynamicTableDataProp} from "@/app/ui/tables/dynamic-table/definitions";
 
-export default function UsersTable(props: { users: IDynamicTableDataProp[] }) {
+export default async function UsersTable(
+  {query, currentPage, totalPages}: { query: string; currentPage: number; totalPages: number },
+) {
+  const users = await getUsers(query, currentPage);
+
   function editUser(user: object) {
     console.log('User:', user);
   }
 
   return (
-    <DynamicTable
-      columns={usersTableColumns}
-      data={props.users}
-      onClick={editUser}
-    />
+    <>
+      <Suspense>
+        <DynamicTable
+          columns={usersTableColumns}
+          data={users}
+        />
+      </Suspense>
+
+      <div className="py-5 flex items-center justify-center">
+        <Pagination
+          totalPages={totalPages}
+        />
+      </div>
+    </>
   )
 }

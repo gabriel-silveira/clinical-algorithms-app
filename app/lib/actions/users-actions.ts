@@ -1,12 +1,23 @@
 'use server';
 
-import prisma from '@/app/lib/prisma'
+import prisma from '@/app/lib/prisma';
 
-export async function getUsers() {
+export async function getUsers(
+  keyword: string,
+  currentPage: number,
+) {
   try {
-    return await prisma.user.findMany();
+    const query = keyword ? {
+      where: {
+        name: { contains: keyword },
+        email: { contains: keyword }
+      }
+    } : undefined;
+
+    return await prisma.user.findMany(query);
   } catch (error) {
     console.error(error);
+
     return Promise.reject(error);
   }
 }

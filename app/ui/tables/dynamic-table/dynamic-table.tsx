@@ -2,10 +2,10 @@
 
 import CheckIcon from '@mui/icons-material/Check';
 import ClearIcon from '@mui/icons-material/Clear';
-import {IDynamicTableDataProp, IDynamicTableProps} from "@/app/ui/tables/dynamic-table/definitions";
+import {IDynamicTableProps} from "@/app/ui/tables/dynamic-table/definitions";
 
 export default function DynamicTable(props: IDynamicTableProps) {
-  const {columns, data, onClick} = props;
+  const {columns, data} = props;
 
   const allColumns = [
     ...columns,
@@ -15,10 +15,6 @@ export default function DynamicTable(props: IDynamicTableProps) {
       className: 'text-center',
     },
   ];
-
-  function handleOnClick(row: IDynamicTableDataProp) {
-    if (onClick) onClick(row);
-  }
 
   return (
     <table className="w-full">
@@ -39,7 +35,6 @@ export default function DynamicTable(props: IDynamicTableProps) {
       {data.map((row, rowIndex) => (
         <tr
           key={`row-${rowIndex}`} className="hover:bg-primary/20 cursor-pointer text-black border-b-1"
-          onClick={() => handleOnClick(row)}
         >
           {allColumns.map((column, columnIndex) => (
             <td
