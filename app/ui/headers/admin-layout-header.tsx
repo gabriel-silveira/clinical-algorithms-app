@@ -1,7 +1,7 @@
 'use client';
 
 import MenuIcon from '@mui/icons-material/Menu';
-import Image from 'next/image';
+import AccountTreeIcon from '@mui/icons-material/AccountTree';
 import OutlinedButton from "@/app/ui/buttons/outline-buttons";
 
 export default function AdminLayoutHeader() {
@@ -15,15 +15,12 @@ export default function AdminLayoutHeader() {
         PAHO
       </div>
 
-      <div className="absolute w-[250px] left-[50%] ml-[-125px] mt-[5px] flex items-center justify-between">
-        <Image
-          src="/flowchart-icon.png"
-          width={136 / 3}
-          height={127 / 3}
-          alt="Flowchar icon"
-        />
+      <div className="absolute w-[240px] left-[50%] ml-[-120px] mt-[5px] flex items-center justify-between">
+        <div className="font-light mt-1">
+          <AccountTreeIcon fontSize='large' />
+        </div>
 
-        <div className="font-bold text-xl">
+        <div className="font-bold text-xl mt-1">
           Algoritmos Clínicos
         </div>
       </div>

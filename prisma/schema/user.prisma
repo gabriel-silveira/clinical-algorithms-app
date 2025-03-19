@@ -4,6 +4,6 @@ model User {
   email String  @unique
   password String
   phone String
-  maintainer Boolean
-  master Boolean
+  maintainer Boolean @default(false)
+  master Boolean @default(false)
 }

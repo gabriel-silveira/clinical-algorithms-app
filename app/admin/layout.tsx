@@ -1,6 +1,7 @@
 import AdminLayoutHeader from "@/app/ui/headers/admin-layout-header";
 import AdminLayoutFooter from "@/app/ui/footers/admin-layout-footer";
 import AdminMainMenu from "@/app/ui/menus/admin-main-menu";
+import {ToastContainer} from "react-toastify";
 
 export default function AdminLayout({children}: { children: React.ReactNode }) {
   return (
@@ -18,6 +19,8 @@ export default function AdminLayout({children}: { children: React.ReactNode }) {
       </div>
 
       <AdminLayoutFooter/>
+
+      <ToastContainer/>
     </>
   )
 }
